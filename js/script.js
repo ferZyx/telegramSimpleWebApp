@@ -1,6 +1,7 @@
 let main_table = document.querySelector('#main_table')
 let day_dictionary = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
 let tg = window.Telegram.WebApp;
+tg.expand()
 let data = { user_id: tg.initDataUnsafe.user.id }
 // let data = { user_id: 638404076 }
 let table = ''
