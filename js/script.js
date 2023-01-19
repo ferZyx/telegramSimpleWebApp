@@ -1,9 +1,10 @@
 
 let tg = window.Telegram.WebApp;
 
-let data = { id: tg.initDataUnsafe.user.id }
+// let data = { id: tg.initDataUnsafe.user.id }
+let data = { id: 638404076 }
 
-fetch('https://tolyan.onrender.com/get_schedule_for_bot_by_id/', {
+fetch('https://tolyan.onrender.com/get_schedule_for_bot_by_id', {
   method: 'POST',
   body: JSON.stringify(data), 
   headers: { 'Content-Type': 'application/json' },
