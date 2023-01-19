@@ -79,9 +79,6 @@ td:nth-child(even){
 	table.table-2 tr{
 		display: block;
 	}
-	table.table-2 tr{
-        
-	}
 	table.table-2 th, table.table-2 td{
 		display: block;
 		text-align: center;
