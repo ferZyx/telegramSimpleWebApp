@@ -156,16 +156,37 @@ td:nth-child(even){
     display: none;
 }
 
-.center {
+.error-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 120%;
-    line-height: 25px;
     text-align: center;
 }
 
+#error-msg {
+    position: relative;
+    font-size: 120%;
+    line-height: 25px;
+}
 
+#error-msg::after {
+    content: "";
+    width: 8px;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    top:100%;
+    animation: blink-animation .5s ease-in-out infinite;
+}
 
+@keyframes blink-animation {
+    0%{
+        opacity: 0;
+    }
+    
+    50%{
+        opacity: 1;
+    }
+}
 
