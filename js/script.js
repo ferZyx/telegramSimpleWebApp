@@ -2,7 +2,7 @@
 let tg = window.Telegram.WebApp;
 
 // let data = { id: tg.initDataUnsafe.user.id }
-let data = { id: 638404076 }
+let data = { user_id: 638404076 }
 
 fetch('https://tolyan.onrender.com/get_schedule_for_bot_by_id', {
   method: 'POST',
