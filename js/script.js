@@ -53,7 +53,7 @@ fetch('https://tolyan.onrender.com/get_schedule_for_bot_by_id', {
 
 function typewriter(error, string) {
     let i = 0;
-    const speed = 30;
+    const speed = 50;
 
     function type() {
         if (i < string.length) {
