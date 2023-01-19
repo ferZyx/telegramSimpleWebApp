@@ -29,6 +29,7 @@ body {
     -webkit-user-select: none;
     user-select: none;
     cursor: default;
+    
   }
   html.dark body {
     --block-bg-color: var(--tg-theme-bg-color);
@@ -38,3 +39,51 @@ body {
     --hint-color: #64666d;
     --placeholder-color: #5d6163;
   }
+
+table.table-2 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+table.table-2 tr {
+	background-color: var(--tg-theme-secondary-bg-color);
+}
+table.table-2 th, table.table-2 td {
+	text-align: left;
+    padding: 8px;
+}
+
+table.table-2 th{
+	font-weight: bold;
+}
+td,a{
+    color:#c7c7c7;
+}
+span{
+    text-align: center;
+    color:pink;
+}
+b{
+    color:pink;
+    font-weight: 400;
+    font-size: 20px;
+}
+td:nth-child(even){
+    background-color: var(--tg-theme-bg-color);
+}
+.line{
+    background-color: var(--tg-theme-text-color);
+}
+
+@media screen and (max-width: 600px) {
+	table.table-2 tr{
+		display: block;
+	}
+	table.table-2 tr{
+        
+	}
+	table.table-2 th, table.table-2 td{
+		display: block;
+		text-align: center;
+	}
+}
