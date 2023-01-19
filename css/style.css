@@ -57,14 +57,14 @@ table.table-2 th{
 	font-weight: bold;
 }
 td,a{
-    color:#c7c7c7;
+    color:var(--text-color);
 }
 span{
     text-align: center;
-    color:pink;
+    color:var(--text-color);
 }
 b{
-    color:pink;
+    color:var(--text-color);
     font-weight: 400;
     font-size: 20px;
 }
