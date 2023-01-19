@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hmmm</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
+    <script>
+        function setThemeClass() {
+          document.documentElement.className = Telegram.WebApp.colorScheme;
+        }
+        Telegram.WebView.onEvent('theme_changed', setThemeClass);
+        setThemeClass();
+      </script>
     Is it?
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
