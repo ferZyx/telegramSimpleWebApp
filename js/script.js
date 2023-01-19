@@ -1,9 +1,14 @@
 let main_table = document.querySelector('#main_table')
 let day_dictionary = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
 let tg = window.Telegram.WebApp;
-// let data = { user_id: tg.initDataUnsafe.user.id }
-let data = { user_id: 638404076 }
+let data = { user_id: tg.initDataUnsafe.user.id }
+// let data = { user_id: 638404076 }
 let table = ''
+let today = new Date();
+let dayOfWeek = today.getDay() - 1;
+if(dayOfWeek < 0) {
+    dayOfWeek = 0
+}
 
 fetch('https://tolyan.onrender.com/get_schedule_for_bot_by_id', {
     method: 'POST',
@@ -22,6 +27,9 @@ fetch('https://tolyan.onrender.com/get_schedule_for_bot_by_id', {
             table += '</tr>'
         }
         main_table.innerHTML = table
+        tr_list = document.querySelectorAll('tr')
+        tr_list[dayOfWeek].scrollIntoView({ behavior: 'smooth' });
+
     })
     .catch(error => console.error('Error:', error));
 
