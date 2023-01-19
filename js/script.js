@@ -1,8 +1,8 @@
 let main_table = document.querySelector('#main_table')
 let day_dictionary = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
 let tg = window.Telegram.WebApp;
-// let data = { user_id: tg.initDataUnsafe.user.id }
-let data = { user_id: 638404076 }
+let data = { user_id: tg.initDataUnsafe.user.id }
+// let data = { user_id: 638404076 }
 let table = ''
 let today = new Date();
 let dayOfWeek = today.getDay() - 1;
@@ -44,8 +44,8 @@ fetch('https://tolyan.onrender.com/get_schedule_for_bot_by_id', {
     })
     .catch(error => {
          console.error('Error:', error)
-         main_table.innerHTML = 'А ты говорил мне какое тебе нужно расписание?'
          load_page()
+         document.querySelector('#error-msg').innerHTML = 'Произошла ошибка. Попробуйте загрузить расписание через бота, и потом попробовать снова.'
         });
 
 
