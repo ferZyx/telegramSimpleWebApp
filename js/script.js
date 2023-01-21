@@ -33,8 +33,9 @@ fetch('https://tolyan.onrender.com/get_schedule_for_bot_by_id', {
             table += '<tr>'
             table += '<td>' + day_dictionary[i] + '</td>'
             schedule_day_array = data[i].split('\n\n')
+            console.log(schedule_day_array)
             schedule_day_array.forEach(element => {
-                table += '<td>' + element.replace('\n', '<br>') + '</td>'
+                table += '<td>' + element.replaceAll('\n', '<br>') + '</td>'
             });
             table += '</tr>'
         }
